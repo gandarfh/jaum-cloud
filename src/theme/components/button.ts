@@ -2,6 +2,7 @@ import {
   ComponentSingleStyleConfig,
   SystemStyleObjectRecord,
   ThemeComponents,
+  theme,
 } from "@chakra-ui/react";
 
 type ButtonType = ThemeComponents["Button"];
@@ -57,7 +58,6 @@ const variants = {
     },
   },
   outline: {
-    color: "black.500",
     fontSize: "t-md.1",
     backgroundColor: "black.0",
     borderColor: "black.200",
@@ -74,5 +74,5 @@ export const Button: ComponentSingleStyleConfig = {
   baseStyle,
   defaultProps,
   sizes,
-  variants,
+  variants: theme.components.Button.variants,
 };
